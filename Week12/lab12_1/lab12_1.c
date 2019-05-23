@@ -48,15 +48,20 @@ void checkToken(char (*str)[100],int size)
 {
 	char *delimiter = " ,.!\t";
 	char *ptoken;
+	char* next_token;
+
 	int i;
+
 	for(i = 0 ; i < size ; i++){
 		printf("<< %d줄에 입력한 단어(토큰) 출력>>\n", i + 1);
 		ptoken = strtok(str[i], delimiter);
+		// ptoken = strtok_s(next_token,delimiter,&next_token);
 		while (ptoken != NULL)
 		{
 			printf("strlen(%s) = %d\n", ptoken,strlen(ptoken));
 			ptoken = strtok(NULL, delimiter);
 			//ptoken = strtok_s(NULL,delimiter,&next_token);
+			// ptoken = strtok_s(next_token,delimiter,&next_token);
 		}
 	}
 }
