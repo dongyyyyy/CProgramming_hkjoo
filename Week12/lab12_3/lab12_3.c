@@ -32,7 +32,7 @@ void reverseToken(char *str)
 	char *ptoken;
 	char* next_token;
 	ptoken = strtok(str, delimiter);
-	// ptoken = strtok_s(next_token,delimiter,&next_token);
+	// ptoken = strtok_s(str,delimiter,&next_token);
 	while (ptoken != NULL)
 	{
 		for (i = strlen(ptoken) - 1; i >= 0; i--)

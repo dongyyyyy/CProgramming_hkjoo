@@ -55,7 +55,7 @@ void checkToken(char (*str)[100],int size)
 	for(i = 0 ; i < size ; i++){
 		printf("<< %d줄에 입력한 단어(토큰) 출력>>\n", i + 1);
 		ptoken = strtok(str[i], delimiter);
-		// ptoken = strtok_s(next_token,delimiter,&next_token);
+		// ptoken = strtok_s(str[i],delimiter,&next_token);
 		while (ptoken != NULL)
 		{
 			printf("strlen(%s) = %d\n", ptoken,strlen(ptoken));
