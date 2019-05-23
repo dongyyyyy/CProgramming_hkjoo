@@ -7,7 +7,7 @@ int * multiply(int, int);
 int main()
 {
 	int m = 0, n = 0, sum = 0, diff = 0;
-
+	int* result;
 	printf("두 정수 입력 : ");
 	scanf_s("%d %d", &m, &n);
 
@@ -15,7 +15,8 @@ int main()
 	printf("\t두 정수 합(sum) : %d\n", sum);
 	printf("두 정수 차(return) : %d", *subtract(&diff, m, n));
 	printf("\t두 정수 차(diff) : %d\n", diff);
-	printf("두 정수 차 : %d\n", *multiply( m, n));
+	result = *multiply(m, n);
+	printf("두 정수 차 : %d\n", *result);
 
 	system("pause");
 	return 0;

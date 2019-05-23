@@ -4,7 +4,7 @@
 #include <math.h>
 
 void input();
-void inputNumber(int *);
+void inputNumber(int*);
 void printIntToString(int);
 
 int main()
@@ -21,7 +21,7 @@ void input()
 	printIntToString(number);
 }
 
-void inputNumber(int *number)
+void inputNumber(int* number)
 {
 	printf("10000º¸´Ù ÀÛÀº Á¤¼ö ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä. -> ");
 	scanf_s("%d", number);
@@ -33,8 +33,8 @@ void printIntToString(int number)
 	int i = 0;
 	int bool = 0;
 	int num;
-	char *str[10] = { "ÀÏ","ÀÌ","»ï","»ç","¿À","À°","Ä¥","ÆÈ","±¸" };
-	char *counter[10] = { "","½Ê","¹é","Ãµ" };
+	char* str[10] = { "ÀÏ","ÀÌ","»ï","»ç","¿À","À°","Ä¥","ÆÈ","±¸" };
+	char* counter[10] = { "","½Ê","¹é","Ãµ" };
 	for (i = 4; i >= 1; i--)
 	{
 		if ((num = (number / (int)pow(10.0, (double)i - 1))) > 0)
@@ -45,7 +45,7 @@ void printIntToString(int number)
 				strcat(result, counter[i - 1]);
 				bool++;
 			}
-			else{
+			else {
 				strcat(result, " ");
 				strcat(result, str[num - 1]);
 				strcat(result, counter[i - 1]);
