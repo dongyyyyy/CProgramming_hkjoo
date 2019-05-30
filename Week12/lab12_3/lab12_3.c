@@ -28,10 +28,11 @@ void reverseToken(char *str)
 {
 	printf("\n입력한 각각의 단어를 반대로 출력합니다. ->\n");
 	int i;
-	char *delimiter = " ,!.\t";
+	char *delimiter = " ,!\t";
 	char *ptoken;
+	char *next_token;
 
-	ptoken = strtok(str, delimiter);
+	ptoken = strtok_s(str, delimiter,&next_token);
 	while (ptoken != NULL)
 	{
 		for (i = strlen(ptoken) - 1; i >= 0; i--)
@@ -39,7 +40,7 @@ void reverseToken(char *str)
 			putchar(ptoken[i]);
 		}
 		printf(" ");
-		ptoken = strtok(NULL, delimiter);
+		ptoken = strtok_s(next_token, delimiter,&next_token);
 	}
 	puts("");
 }
