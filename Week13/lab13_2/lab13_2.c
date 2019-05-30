@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 #define MAX 7
-
+/*Week13*/
 enum card { hearts, diamonds, clubs, spades };
 enum number { ace = 1, two, three, four, five, six, seven, eight, nine, teen, jack, queen, king };
 

@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="QueueMain.c">
+    <ClCompile Include="Queuelibs.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="QueueLibs.c">
+    <ClCompile Include="QueueMain.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
