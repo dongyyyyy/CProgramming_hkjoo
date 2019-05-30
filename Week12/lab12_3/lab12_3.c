@@ -30,9 +30,15 @@ void reverseToken(char *str)
 	int i;
 	char *delimiter = " ,!\t";
 	char *ptoken;
+<<<<<<< HEAD
 	char *next_token;
 
 	ptoken = strtok_s(str, delimiter,&next_token);
+=======
+	char* next_token;
+	ptoken = strtok(str, delimiter);
+	// ptoken = strtok_s(str,delimiter,&next_token);
+>>>>>>> 943b65cb3520285d787e851ad4581e8dc2e71105
 	while (ptoken != NULL)
 	{
 		for (i = strlen(ptoken) - 1; i >= 0; i--)
@@ -40,7 +46,12 @@ void reverseToken(char *str)
 			putchar(ptoken[i]);
 		}
 		printf(" ");
+<<<<<<< HEAD
 		ptoken = strtok_s(next_token, delimiter,&next_token);
+=======
+		ptoken = strtok(NULL, delimiter);
+		//ptoken = strtok_s(next_token,delimiter,&next_token);
+>>>>>>> 943b65cb3520285d787e851ad4581e8dc2e71105
 	}
 	puts("");
 }

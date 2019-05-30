@@ -42,15 +42,15 @@ person inputPerson()
 	person.studentNumber = n;
 	getchar();
 	printf("이름을 입력하시오 : ");
-	gets_s(ch, sizeof(char) * 512);
+	gets(ch);
 	person.name = (char *)malloc(sizeof(char)*strlen(ch));
 	strcpy(person.name, ch);
 	printf("전화번호를 입력하시오 : ");
-	gets_s(ch, sizeof(char) * 512);
+	gets(ch);
 	person.tel = (char *)malloc(sizeof(char)*strlen(ch));
 	strcpy(person.tel, ch);
 	printf("주소를 입력하시오 : ");
-	gets_s(ch, sizeof(char) * 512);
+	gets(ch);
 	person.address = (char *)malloc(sizeof(char)*strlen(ch));
 	strcpy(person.address, ch);
 	return person;
